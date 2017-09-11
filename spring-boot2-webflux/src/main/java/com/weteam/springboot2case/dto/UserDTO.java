@@ -10,6 +10,7 @@
  */
 package com.weteam.springboot2case.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
 import lombok.Data;
 
@@ -37,8 +38,10 @@ public class UserDTO implements Serializable {
 
     private String mobile;
 
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     private LocalDateTime create_at;
 
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     private LocalDateTime update_at;
 
     private Integer del_flag;
