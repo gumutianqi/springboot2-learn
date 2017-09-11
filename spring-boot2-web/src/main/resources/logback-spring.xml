@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <contextName>spring-boot2-case</contextName>
-    <property name="application.name" value="spring-boot2-webflux"/>
+    <property name="application.name" value="spring-boot2-web"/>
     <property name="log.path" value="./logs/${application.name}"/>
     <property name="log.level" value="INFO"/>
 
