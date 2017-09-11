@@ -26,6 +26,10 @@ import java.util.List;
  */
 @Repository
 public class UserRepository {
+
+    /**
+     * 模拟 DB 数据
+     */
     private final List<UserDomain> users = Arrays.asList(
             UserDomain.builder()
                     .id(1L)

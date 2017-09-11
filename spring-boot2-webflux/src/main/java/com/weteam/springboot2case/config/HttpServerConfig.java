@@ -27,6 +27,7 @@ import reactor.ipc.netty.http.server.HttpServer;
  */
 @Configuration
 public class HttpServerConfig {
+
     @Autowired
     private Environment environment;
 
