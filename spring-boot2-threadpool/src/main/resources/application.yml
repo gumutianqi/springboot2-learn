@@ -1,0 +1,68 @@
+## global configuration
+info:
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    java-version: @java.version@
+    encoding: @project.build.sourceEncoding@
+    environment: ${spring.profiles.active}
+    server-port: ${server.port}
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ${info.build.name}-${spring.profiles.active}
+  cloud.loadbalancer.retry.enabled: true
+  resources:
+    add-mappings: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  jackson:
+    date-format: "yyyy-MM-dd HH:mm:ss"
+    locale: zh_CN
+    time-zone: "GMT+8"
+  http:
+    converters:
+      preferred-json-mapper: jackson
+  aop:
+    proxy-target-class: true
+    auto: true
+server:
+  port: 8080
+
+### Spring Boot Management Enabled
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+## logback
+logging:
+  level:
+    root: INFO
+    me.weteam: DEBUG
+    org.springframework.web: DEBUG
+
+### 生学网自定义配置信息
+me.weteam:
+  app-id: 8070
+  app-name: ${info.build.name}-${spring.profiles.active}
+  token: false
+  auth: false
+  point: false
+  interceptor-pattern: []
+  exclude-interceptor-pattern: []
+  converter-json: true
+  converter-json-pattern: ["/api/**", "/error"]
+  profile-threshold: 300
+
+## Swagger configuration
+swagger:
+  enabled: true
+  title: ${info.build.name}
+  description: ${info.build.description}
+  version: ${info.build.version}
+  base-package: cn.sxw.pros.passport
+  base-path: /**

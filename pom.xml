@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>me.weteam</groupId>
+        <artifactId>weteam-dependencies</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.weteam</groupId>
+    <artifactId>springboot2-learn</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>spring-boot2-threadpool</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <name>springboot2-learn</name>
+    <description>base on spring-boot2.0</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <!-- 可以在这里强制覆盖依赖默认的版本号，只需要与依赖版本号使用的属性名称一致即可 -->
+
+    </properties>
+
+    <scm>
+        <url>https://github.com/gumutianqi/springboot2-learn</url>
+        <connection>scm:git:https://github.com/gumutianqi/springboot2-learn.git</connection>
+        <developerConnection>scm:git:https://github.com/gumutianqi/springboot2-learn.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+</project>
